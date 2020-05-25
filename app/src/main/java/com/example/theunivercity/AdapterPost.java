@@ -50,9 +50,9 @@ public class AdapterPost  extends ArrayAdapter<Post> {
         final Button valid = view.findViewById(R.id.validPost);
         final Button comment = view.findViewById(R.id.commentPost);
 Calendar c = Calendar.getInstance();
-        String time = c.get(Calendar.HOUR_OF_DAY)+":"+ c.get(Calendar.MINUTE);
+
        // date.setText(list.get(position).getDateP());
-        date.setText(time);
+        date.setText(String.valueOf(list.get(position).getDateP()));
         theme.setText(String.valueOf(list.get(position).getThemeP()));
         title.setText(String.valueOf(list.get(position).getTitleP()));
         text.setText(list.get(position).getTextP());

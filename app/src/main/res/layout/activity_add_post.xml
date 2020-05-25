@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="">
+
+    <TextView
+        android:id="@+id/titleadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Add Post"
+        android:textSize="20sp" />
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:gravity="center"
+       >
+    <LinearLayout
+        android:id="@+id/specialityAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="15dp"
+        android:weightSum="1"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="Speciality :"
+            />
+        <Spinner
+            android:id="@+id/spinnerPost"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/titlePostAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="title "
+        android:layout_marginHorizontal="15dp"
+        android:layout_below="@id/specialityAdd"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/textPostAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="text"
+        android:inputType="textMultiLine"
+        android:layout_marginHorizontal="15dp"
+        android:layout_below="@id/titlePostAdd"
+        android:layout_marginTop="20dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="45dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="15dp"
+        android:layout_below="@+id/textPostAdd"
+        >
+        <Button
+            android:id="@+id/addPost"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Post"
+            android:layout_marginHorizontal="10dp"
+            android:background="#00000000"
+            />
+        <Button
+            android:id="@+id/back"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Back "
+            android:layout_marginHorizontal="10dp"
+            android:background="#00000000"
+            />
+
+    </LinearLayout>
+   </RelativeLayout>
+</RelativeLayout>

@@ -13,13 +13,13 @@
             android:layout_width="0dp"
             android:layout_weight="0.9"
             android:layout_height="28sp"
-            android:textSize="20sp"
+            android:textSize="12sp"
             android:background="#20000000"/>
         <TextView
             android:id="@+id/themePost"
             android:layout_width="0dp"
             android:layout_weight="0.1"
-            android:layout_height="28sp"/>
+            android:layout_height="12sp"/>
     </LinearLayout>
     <TextView
         android:id="@+id/titlePost"
@@ -27,13 +27,18 @@
         android:layout_height="wrap_content"
         android:text="Title"
         android:textStyle="bold"
-        android:textSize="25sp"
-        />
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:layout_marginHorizontal="4dp"
+        android:paddingHorizontal="8dp"/>
     <TextView
         android:id="@+id/textPost"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="22sp"/>
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:layout_marginHorizontal="4dp"
+        android:paddingHorizontal="8dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="35dp"
@@ -48,7 +53,7 @@
             android:layout_height="match_parent"
             android:text="Valid (0)"
             android:background="#9CFCF7F7"
-            android:onClick="va"/>
+            />
 
         <Button
             android:id="@+id/commentPost"
