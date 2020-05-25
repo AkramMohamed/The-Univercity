@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">The Univercity</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string-array name="speciality">
+        <item>1er année</item>
+        <item>2eme année</item>
+        <item>3eme année  TI</item>
+        <item>3eme année  GL</item>
+        <item>3eme année  SI</item>
+    </string-array>
+</resources>

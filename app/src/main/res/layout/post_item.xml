@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <TextView
+            android:id="@+id/datePost"
+            android:layout_width="0dp"
+            android:layout_weight="0.9"
+            android:layout_height="28sp"
+            android:textSize="20sp"
+            android:background="#20000000"/>
+        <TextView
+            android:id="@+id/themePost"
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="28sp"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/titlePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        />
+    <TextView
+        android:id="@+id/textPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:gravity="center"
+        android:background="#EEE8E8">
+        <Button
+            android:id="@+id/validPost"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:text="Valid (0)"
+            android:background="#9CFCF7F7"
+            android:onClick="va"/>
+
+        <Button
+            android:id="@+id/commentPost"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:text="comment (0)"
+            android:background="#9CFCF7F7"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="14dp"
+        android:background="#92000000"/>
+
+</LinearLayout>

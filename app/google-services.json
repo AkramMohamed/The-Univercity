@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1083412538110",
+    "firebase_url": "https://the-univercity.firebaseio.com",
+    "project_id": "the-univercity",
+    "storage_bucket": "the-univercity.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083412538110:android:c0203917c982660bd27baf",
+        "android_client_info": {
+          "package_name": "com.example.theunivercity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083412538110-pkos6tdhckrbevg1i9bkcug261842equ.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.theunivercity",
+            "certificate_hash": "936bd2036c2b87fc20af1aa91b02ceeccd1f0fa7"
+          }
+        },
+        {
+          "client_id": "1083412538110-oev4mfqelposs6dur2l54pq7ke03fv9l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBapLbojY-JERADox8IYozZwxp57frD4l4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1083412538110-oev4mfqelposs6dur2l54pq7ke03fv9l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

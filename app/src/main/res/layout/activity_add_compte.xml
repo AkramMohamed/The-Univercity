@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:id="@+id/titleadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:text="Add Compte"
+        android:textSize="20sp"/>
+    <LinearLayout
+        android:id="@+id/fullNameAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_below="@+id/titleadd"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <EditText
+            android:id="@+id/firstNameAdd"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="First Name "
+            android:layout_marginHorizontal="15dp"
+
+            />
+        <EditText
+            android:id="@+id/familyNameAdd"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Family Name "
+            android:layout_marginHorizontal="15dp"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/specialityAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_below="@id/fullNameAdd"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="15dp"
+        android:weightSum="1">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="Speciality :"
+            />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/passwordAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="password"
+        android:layout_marginHorizontal="15dp"
+        android:layout_below="@id/specialityAdd"
+        android:layout_marginTop="20dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="45dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="15dp"
+        android:layout_below="@id/passwordAdd"
+        >
+        <Button
+            android:id="@+id/btnProductAdd"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="ADD PRODUCT "
+            android:layout_marginHorizontal="10dp"
+            android:background="#00000000"
+            />
+        <Button
+            android:id="@+id/back"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Back "
+            android:layout_marginHorizontal="10dp"
+            android:background="#00000000"
+            />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
