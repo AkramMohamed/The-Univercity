@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddPost"></activity>
+        <activity android:name=".StudentPosts"></activity>
+        <activity android:name=".StudentHome" />
+        <activity android:name=".ChatRoom" />
+        <activity android:name=".ComptesListTeam" />
+        <activity android:name=".AddPost" />
         <activity android:name=".TeamPosts" />
         <activity android:name=".TeamHome" />
         <activity android:name=".AddCompte" />

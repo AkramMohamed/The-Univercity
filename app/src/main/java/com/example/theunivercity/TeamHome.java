@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class TeamHome extends AppCompatActivity {
-    Button post ;
+    Button post,chat ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,5 +21,15 @@ public class TeamHome extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        chat = findViewById(R.id.chat);
+        chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TeamHome.this , ComptesListTeam.class);
+                startActivity(intent);
+            }
+        });
     }
+
+
 }

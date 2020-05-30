@@ -4,17 +4,18 @@ public class Compte {
     int id , num_cart  ;
     String first_name , family_name  ;
     String speciality ;
-    String password ;
+    String username , password ;
 
     public Compte() {
     }
 
-    public Compte(int id, int num_cart, String first_name, String family_name, String speciality, String password) {
+    public Compte(int id, int num_cart, String first_name, String family_name, String speciality, String username, String password) {
         this.id = id;
         this.num_cart = num_cart;
         this.first_name = first_name;
         this.family_name = family_name;
         this.speciality = speciality;
+        this.username = username;
         this.password = password;
     }
 
@@ -56,6 +57,14 @@ public class Compte {
 
     public void setSpeciality(String speciality) {
         this.speciality = speciality;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -20,19 +21,27 @@ import java.util.List;
 
 
 
-public class ComptesList extends AppCompatActivity {
-    ListView comptesList ;
-    List<Compte> list ;
-    AdapterCompte adapterCompte ;
-    DatabaseReference myRef ;
-    Compte compte ;
+public class ComptesListTeam extends AppCompatActivity {
+   private ListView comptesList ;
+   private List<Compte> list ;
+   private AdapterCompte adapterCompte ;
+   private DatabaseReference myRef ;
+   private Compte compte ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comptes_list);
 
         setProductList();
-
+        comptesList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(ComptesListTeam.this,ChatRoom.class);
+                intent.putExtra("idS",list.get(position).getId());
+                intent.putExtra("sendBy","Listening Team");
+                startActivity(intent);
+            }
+        });
     }
 
 
@@ -42,7 +51,6 @@ public class ComptesList extends AppCompatActivity {
         adapterCompte = new AdapterCompte(this,R.layout.compte_item, list );
 
         myRef = FirebaseDatabase.getInstance().getReference();
-        myRef.child("Comptes").keepSynced(true);
 
         compte = new Compte();
 
@@ -51,12 +59,12 @@ public class ComptesList extends AppCompatActivity {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-               list.clear();
+                list.clear();
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
 
                     compte = dataSnapshot1.getValue(Compte.class);
                     list.add(compte);
-                    Toast.makeText(ComptesList.this, "wsal", Toast.LENGTH_SHORT).show();
+
                     comptesList.setAdapter(adapterCompte);
 
                 }
@@ -72,15 +80,6 @@ public class ComptesList extends AppCompatActivity {
 
 
 
-    }
-
-
-    int id ;
-    public void add(View view) {
-       Intent intent = new Intent(ComptesList.this , AddCompte.class);
-       if (list.isEmpty()){id = 1 ;}else {id = list.size()+1;}
-       intent.putExtra("id",id);
-       startActivity(intent);
     }
 
 }

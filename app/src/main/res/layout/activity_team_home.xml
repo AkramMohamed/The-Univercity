@@ -23,4 +23,13 @@
         android:layout_marginTop="182dp"
         android:text="Posts"
         android:background="@drawable/bgcolor1"/>
+    <Button
+        android:id="@+id/chat"
+        android:layout_width="139dp"
+        android:layout_height="65dp"
+        android:layout_below="@+id/posts"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="82dp"
+        android:text="Chat"
+        android:background="@drawable/bgcolor1"/>
 </RelativeLayout>

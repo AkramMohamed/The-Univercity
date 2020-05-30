@@ -39,15 +39,12 @@ public class TeamPosts extends AppCompatActivity {
         listPosts = findViewById(R.id.postsLV);
         list = new ArrayList<>();
 
-
         adapterPost = new AdapterPost(this,R.layout.post_item,list);
-
 
         myRef = FirebaseDatabase.getInstance().getReference();
         //myRef.child("Comptes").keepSynced(true);
 
         post = new Post( );
-
 
         myRef.child("Posts").addValueEventListener(new ValueEventListener() {
 
@@ -62,18 +59,11 @@ public class TeamPosts extends AppCompatActivity {
                     listPosts.setAdapter(adapterPost);
 
                 }
-
-
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
             }
         });
-
-
-
     }
 
 int id ;

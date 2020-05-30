@@ -40,11 +40,14 @@ public class AddCompte extends AppCompatActivity implements AdapterView.OnItemSe
 
         Intent intent = getIntent();
         final int id =intent.getIntExtra("id",0);
+
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myRef.child("Comptes").push().setValue(new Compte(id,17172354,firstName.getText().toString(),familyName.getText().toString(),
-                        speciality , password.getText().toString() ));
+               String name = firstName.getText().toString();
+            String fname = familyName.getText().toString();
+                myRef.child("Comptes").push().setValue(new Compte(id,17172354, name, fname,
+                        speciality, name+fname, password.getText().toString() ));
                 finish();
             }
         });
